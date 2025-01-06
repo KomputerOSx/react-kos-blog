@@ -1,0 +1,44 @@
+/* Remove any custom background colors from the footer */
+.footer {
+    padding: 3rem 1.5rem;
+}
+
+/* Ensure the footer sticks to the bottom */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#root {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    flex-shrink: 0;
+}
+
+/* Add these classes to support both light and dark themes */
+.theme-light .footer {
+    background-color: #fafafa;
+    color: #4a4a4a;
+}
+
+.theme-dark .footer {
+    background-color: #363636;
+    color: #f5f5f5;
+}
+
+/* Adjust link colors for dark theme */
+.theme-dark .footer a {
+    color: #3273dc;
+}
+
+.theme-dark .footer a:hover {
+    color: #363636;
+}
